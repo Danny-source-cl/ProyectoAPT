@@ -1,0 +1,187 @@
+:root {
+    --color-primario: #6F4C3E; /* Color marrón oscuro más suave */
+    --color-secundario: #F7E4D4; /* Un tono pastel suave para el fondo */
+    --color-acento: #D4A66A; /* Color dorado suave como acento */
+    --color-fondo: #FFFFFF; /* Fondo blanco limpio */
+    --color-texto: #4B3C33; /* Color de texto marrón claro */
+    --color-detalle: #E2C1A7; /* Tono claro que complementa sin ser agotador */
+    --color-neutro: #B6D6D6; /* Verde agua suave */
+}
+
+body {
+    background-color: var(--color-fondo);
+    font-family: 'Poppins', sans-serif;
+    color: var(--color-texto);
+    min-height: 100vh;
+    position: relative;
+    padding-bottom: 60px; /* Altura del footer */
+}
+
+/* Estilos del Navbar */
+.navbar-custom {
+    background-color: var(--color-secundario);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra más sutil */
+    padding: 1rem 0;
+}
+
+.navbar-custom .navbar-brand {
+    color: var(--color-primario);
+    font-weight: 700;
+    font-size: 1.6rem;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+}
+
+.navbar-custom .navbar-nav .nav-link {
+    color: var(--color-texto);
+    font-weight: 500;
+    transition: all 0.3s ease;
+    padding: 0.5rem 1rem;
+    margin: 0 0.2rem;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.navbar-custom .navbar-nav .nav-link:hover {
+    background-color: var(--color-acento); /* Cambiar a color de acento al pasar el ratón */
+    color: var(--color-fondo); /* Texto blanco sobre fondo de acento */
+    transform: translateY(-2px);
+}
+
+.navbar-custom .navbar-nav .nav-link.active {
+    color: var(--color-fondo); /* Texto blanco para el enlace activo */
+    background-color: var(--color-primario); /* Fondo marrón oscuro */
+}
+
+.navbar-custom .navbar-toggler {
+    border: none;
+    padding: 0.5rem;
+    background-color: var(--color-acento);
+}
+
+/* Estilo para el campo de búsqueda */
+.form-control {
+    border-radius: 20px;
+    border: 1px solid var(--color-detalle);
+    padding: 0.5rem 1rem;
+}
+
+.form-control:focus {
+    border-color: var(--color-primario);
+    box-shadow: 0 0 0 0.2rem rgba(111, 76, 62, 0.25); /* Cambiar sombra a un tono marrón */
+}
+
+/* Footer ajustado */
+.footer {
+    background-color: var(--color-primario);
+    color: var(--color-fondo);
+    text-align: center;
+    padding: 1rem 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 60px; /* Altura fija del footer */
+}
+
+.footer p {
+    margin: 0;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .navbar-custom {
+        padding: 0.5rem 1rem;
+    }
+
+    .navbar-custom .navbar-brand {
+        font-size: 1.3rem;
+    }
+
+    .form-control {
+        margin: 1rem 0;
+    }
+    
+    body {
+        padding-bottom: 80px; /* Aumentar padding en móviles */
+    }
+}
+
+.fixed-size {
+    height: 400px; /* Altura fija para todas las imágenes */
+    object-fit: cover; /* Mantener la relación de aspecto, recortando las imágenes si es necesario */
+}
+
+.loading-placeholder {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+    border-radius: 4px;
+}
+
+.img-placeholder {
+    height: 180px;
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 4px;
+}
+
+.title-placeholder {
+    height: 20px;
+    width: 60%;
+    margin-bottom: 10px;
+}
+
+.text-placeholder {
+    height: 15px;
+    width: 80%;
+    margin-bottom: 8px;
+}
+
+.btn-placeholder {
+    height: 35px;
+    width: 60%;
+    margin-top: 10px;
+}
+
+@keyframes loading {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+/* Transición de opacidad */
+.fade {
+    opacity: 0;
+    transform: scale(0.9); /* Comienza con un escalado menor */
+    transition: opacity 0.8s ease, transform 0.8s ease; /* Suaviza la transición */
+}
+
+.fade.show {
+    opacity: 1;
+    transform: scale(1); /* Escala al tamaño normal */
+}
+
+.card {
+    margin: 10px; /* Margen entre cards */
+    width: 18rem; /* Ancho fijo para todas las cards */
+    height: 350px; /* Altura fija para todas las cards */
+    display: flex; /* Usar flexbox para alinear contenido */
+    flex-direction: column; /* Alinear contenido en columna */
+    justify-content: space-between; /* Espaciado uniforme entre elementos */
+}
+
+.card-img-top {
+    height: 200px; /* Altura fija para las imágenes */
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorsionarse */
+}
+
+.card-body {
+    flex-grow: 1; /* Permitir que el cuerpo de la card crezca para ocupar espacio */
+    display: flex; /* Usar flexbox dentro del cuerpo */
+    flex-direction: column; /* Alinear contenido en columna */
+    justify-content: space-between; /* Espaciado uniforme entre elementos */
+}
+

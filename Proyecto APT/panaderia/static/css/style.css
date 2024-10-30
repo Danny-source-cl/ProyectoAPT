@@ -1,0 +1,107 @@
+:root {
+    --color-primario: #6F4C3E;
+    --color-secundario: #F7E4D4;
+    --color-acento: #D4A66A;
+    --color-fondo: #FFFFFF;
+    --color-texto: #4B3C33;
+    --color-detalle: #E2C1A7;
+    --color-neutro: #B6D6D6;
+}
+
+body {
+    background-color: var(--color-secundario);
+    color: var(--color-texto);
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    background-color: var(--color-fondo);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Estilos del Navbar */
+.navbar {
+    background-color: var(--color-primario) !important;
+    padding: 15px 0;
+}
+
+.navbar-brand {
+    color: var(--color-fondo) !important;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    color: var(--color-fondo) !important;
+    transition: color 0.3s ease;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+    color: var(--color-acento) !important;
+}
+
+.navbar-toggler {
+    background-color: var(--color-detalle) !important;
+}
+
+/* Estilos del Dropdown */
+.dropdown-menu {
+    background-color: var(--color-secundario);
+    border: 1px solid var(--color-detalle);
+}
+
+.dropdown-item {
+    color: var(--color-texto);
+}
+
+.dropdown-item:hover {
+    background-color: var(--color-detalle);
+    color: var(--color-primario);
+}
+
+/* Estilos del formulario de búsqueda */
+.form-control {
+    border: 2px solid var(--color-detalle);
+}
+
+.form-control:focus {
+    border-color: var(--color-acento);
+    box-shadow: 0 0 0 0.2rem rgba(212, 166, 106, 0.25);
+}
+
+.btn-secondary {
+    background-color: var(--color-acento);
+    border-color: var(--color-acento);
+    color: var(--color-texto);
+}
+
+.btn-secondary:hover {
+    background-color: var(--color-primario);
+    border-color: var(--color-primario);
+    color: var(--color-fondo);
+}
+
+/* Estilos para la lista de productos */
+h1 {
+    color: var(--color-primario);
+    margin: 30px 0;
+    text-align: center;
+}
+
+li {
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    margin: 10px 0;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border-left: 4px solid var(--color-acento);
+    list-style: none;
+    transition: transform 0.2s ease;
+}
+
+li:hover {
+    transform: translateX(10px);
+    background-color: var(--color-detalle);
+}
